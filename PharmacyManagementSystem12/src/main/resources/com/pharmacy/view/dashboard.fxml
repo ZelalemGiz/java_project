@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane fx:id="mainPane" prefHeight="726.0" prefWidth="1140.0" stylesheets="@../css/dashboard.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacy.controller.DashboardController">
+    
+    <left>
+        <VBox prefHeight="782.0" prefWidth="337.0" spacing="0" style="-fx-padding: 15;" styleClass="sidebar">
+            <children>
+                
+                <VBox alignment="CENTER" spacing="8" style="-fx-alignment: center;">
+                    <StackPane style="-fx-padding: 5;">
+                        <!-- Decorative border ring - NOT used as clip -->
+                        <Circle fx:id="imageBorder" fill="transparent" radius="15" stroke="white" strokeWidth="0" />
+                        <ImageView fx:id="userImage" fitHeight="227.0" fitWidth="170.0" preserveRatio="true" />
+                    </StackPane>
+                    <Label fx:id="welcomeLabel" styleClass="sidebar-welcome" text="Welcome, User" />
+                    <Label fx:id="roleLabel" styleClass="sidebar-role" text="Administrator" />
+                </VBox>
+                
+                <Region style="-fx-alignment: center;" />
+                
+                <Label prefHeight="52.0" prefWidth="466.0" style="-fx-alignment: center; -fx-font-size: 17;" styleClass="sidebar-section-label" text="MAIN MENU" />
+            <Button fx:id="handleHomebtn" maxWidth="Infinity" onAction="#handleBack" style="-fx-alignment: center;" styleClass="sidebar-button" text="Home" />
+                <Button fx:id="btnPharmacists" maxWidth="Infinity" onAction="#handleOpenPharmacists" style="-fx-alignment: center;" styleClass="sidebar-button" text="Manage Pharmacists" />
+                
+                <Button fx:id="btnMedicine" maxWidth="Infinity" onAction="#handleOpenMedicines" style="-fx-alignment: center;" styleClass="sidebar-button" text="Manage Medicines" />
+                <Button fx:id="btnPOS" maxWidth="Infinity" onAction="#handleOpenPOS" style="-fx-alignment: center;" styleClass="sidebar-button" text="Sell Page" />
+                <Button fx:id="btnSales" maxWidth="Infinity" onAction="#handleOpenSales" style="-fx-alignment: center;" styleClass="sidebar-button" text="Sales History" />
+                <Button fx:id="btnInventory" maxWidth="Infinity" onAction="#handleOpenInventory" style="-fx-alignment: center;" styleClass="sidebar-button" text="Inventory" />
+                <Button fx:id="btnReports" maxWidth="Infinity" onAction="#handleOpenReports" style="-fx-alignment: center;" styleClass="sidebar-button" text="Reports" />
+                
+                <Region style="-fx-alignment: center;" VBox.vgrow="ALWAYS" />
+                
+                <Region style="-fx-alignment: center;" />
+                
+                <Button maxWidth="Infinity" onAction="#handleOpenProfile" prefHeight="43.0" prefWidth="164.0" style="-fx-alignment: center; -fx-font-size: 16;" styleClass="sidebar-button-bottom" text="My Profile" />
+                <Button maxWidth="Infinity" onAction="#handleLogout" style="-fx-alignment: center; -fx-font-size: 16;" styleClass="sidebar-button-logout" text="Logout" />
+                <Region prefHeight="10" style="-fx-alignment: center;" />
+            </children>
+        </VBox>
+    </left>
+    
+    <center>
+        <ScrollPane fx:id="pane" fitToHeight="true" fitToWidth="true" prefHeight="782.0" prefWidth="825.0" style="-fx-background-color: #f1f5f9;">
+            <VBox prefHeight="781.0" prefWidth="924.0" spacing="20" style="-fx-padding: 30;">
+                <children>
+                    <Label styleClass="label-title" text="Dashboard Overview" />
+                    
+                    <HBox spacing="20">
+                        <VBox fx:id="medicineAmount" alignment="CENTER" prefHeight="118.0" prefWidth="140.0" styleClass="card" HBox.hgrow="ALWAYS">
+                     <Label styleClass="label-subtitle" text="Total Medicine" />
+                            <Label styleClass="label-subtitle" />
+                            <Label fx:id="medicinesCountLabel" styleClass="stat-value-blue" text="0" />
+                        </VBox>
+                  <VBox fx:id="MedicinePriceLabel" alignment="CENTER" prefHeight="118.0" prefWidth="145.0" styleClass="card">
+                     <children>
+                        <Label styleClass="label-subtitle" text="Total Price" />
+                        <Label styleClass="label-subtitle" />
+                        <Label fx:id="totalMedicinePriceLabel" prefHeight="40.0" prefWidth="92.0" styleClass="stat-value-blue" text="0.00" />
+                     </children>
+                  </VBox>
+                        <VBox fx:id="sales" alignment="CENTER" styleClass="card" HBox.hgrow="ALWAYS">
+                            <Label styleClass="label-subtitle" text="Total Sale" />
+                            <Label fx:id="salesLabel" prefHeight="40.0" prefWidth="130.0" styleClass="stat-value-green" text="0.00" />
+                        </VBox>
+                        <VBox fx:id="lowStock" alignment="CENTER" prefHeight="118.0" prefWidth="145.0" styleClass="card" HBox.hgrow="ALWAYS">
+                            <Label styleClass="label-subtitle" text="Low Medicine Alerts" />
+                            <Label fx:id="lowStockLabel" prefHeight="40.0" prefWidth="62.0" styleClass="stat-value-orange" text="0" />
+                        </VBox>
+                        <VBox fx:id="expiryMedicine" alignment="CENTER" prefHeight="118.0" prefWidth="144.0" styleClass="card" HBox.hgrow="ALWAYS">
+                            <Label styleClass="label-subtitle" text="Expiry Medcine Alerts" />
+                            <Label fx:id="expiryMedicineLabel" styleClass="stat-value-red" text="0" />
+                        </VBox>
+                    </HBox>
+                    
+                    <HBox fx:id="chartsRow" spacing="20" VBox.vgrow="ALWAYS">
+                        <VBox styleClass="card" HBox.hgrow="ALWAYS">
+                            <Label styleClass="chart-label" text="Revenue (Last 7 Days)" />
+                            <LineChart fx:id="revenueChart" VBox.vgrow="ALWAYS">
+                                <xAxis><CategoryAxis label="Date" /></xAxis>
+                                <yAxis><NumberAxis label="Revenue (USD)" /></yAxis>
+                            </LineChart>
+                        </VBox>
+                        <VBox styleClass="card" HBox.hgrow="ALWAYS">
+                            <Label styleClass="chart-label" text="Top Selling Medicines" />
+                            <BarChart fx:id="medicinesChart" VBox.vgrow="ALWAYS">
+                                <xAxis><CategoryAxis label="Medicine" /></xAxis>
+                                <yAxis><NumberAxis label="Quantity Sold" /></yAxis>
+                            </BarChart>
+                        </VBox>
+                    </HBox>
+                </children>
+            </VBox>
+        </ScrollPane>
+    </center>
+    
+</BorderPane>

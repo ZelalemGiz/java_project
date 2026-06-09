@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="583.0" prefWidth="609.0" styleClass="root" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacy.controller.AddMedicineController">
+   <children>
+      <VBox alignment="CENTER" layoutX="136.0" prefHeight="566.0" prefWidth="453.0" spacing="20.0" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label styleClass="label-title" text="Add New Medicine" />
+            <ScrollPane fitToWidth="true" prefHeight="413.0" prefWidth="478.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+               <content>
+                  <GridPane alignment="CENTER" hgap="15" styleClass="card" vgap="15">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="150" minWidth="120" />
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="200" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints /><RowConstraints /><RowConstraints /><RowConstraints />
+                        <RowConstraints /><RowConstraints /><RowConstraints /><RowConstraints />
+                        
+                     </rowConstraints>
+                     <children>
+                        <Label styleClass="label-subtitle" text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <TextField fx:id="txtName" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        
+                        <Label styleClass="label-subtitle" text="Category:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <!-- ✅ Changed to ComboBox -->
+                        <ComboBox fx:id="cbCategory" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        
+                        <Label styleClass="label-subtitle" text="Cost Price ($):" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtCostPrice" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        
+                        <Label styleClass="label-subtitle" text="Selling Price ($):" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtSellingPrice" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        
+                        <Label styleClass="label-subtitle" text="Stock:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                        <TextField fx:id="txtStock" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        
+                        <Label styleClass="label-subtitle" text="Status:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                        <ComboBox fx:id="cbStatus" maxWidth="Infinity" prefHeight="35.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        
+                        <Label styleClass="label-subtitle" text="Expiry Date:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                        <DatePicker fx:id="dpExpiryDate" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <!-- Branch -->
+                      <Label styleClass="label-subtitle" text="Branch:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                      <ComboBox fx:id="cbBranch" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                     </children>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER" prefHeight="96.0" prefWidth="478.0" spacing="20.0" style="-fx-padding: 10 0 0 0;">
+               <Button onAction="#handleSave" prefWidth="120" style="-fx-background-color: #10b981;" styleClass="button-primary" text="Save" />
+               <Button onAction="#handleClear" prefWidth="120" style="-fx-background-color: #ef4444;" styleClass="button-primary" text="Clear" />
+            </HBox>
+         </children>
+      </VBox>
+      <Button layoutX="14.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="39.0" prefWidth="121.0" text="← Back To Home" />
+   </children>
+</AnchorPane>

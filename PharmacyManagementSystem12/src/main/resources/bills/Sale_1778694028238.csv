@@ -1,0 +1,21 @@
+ID,Date,Buyer,Phone,Medicine,Qty,Price,Discount,Total,Amount,Branch,Seller
+21,2026-05-13 20:19,Walk-in Customer,N/A,4,1,24.00,0.00,24.00,24.00,Branch 1,Manaye Zeleke
+20,2026-05-13 20:18,Walk-in Customer,N/A,1,1,90.00,0.00,90.00,90.00,Branch 1,Manaye Zeleke
+19,2026-05-13 20:17,mn,m,4,1,24.00,0.24,23.76,23.76,Branch 1,Manaye Zeleke
+18,2026-05-13 20:15,mulat,09,1,10,90.00,27.00,873.00,873.00,Branch 1,Manaye Zeleke
+17,2026-05-13 19:18,Walk-in Customer,N/A,4,1,24.00,0.00,24.00,24.00,Branch 1,Manaye Zeleke
+16,2026-05-13 18:57,Walk-in Customer,N/A,4,1,24.00,0.00,24.00,24.00,Branch 1,Manaye Zeleke
+15,2026-05-13 18:51,Walk-in Customer,N/A,1,1,90.00,0.00,90.00,90.00,Branch 1,Manaye Zeleke
+14,2026-05-13 18:30,Walk-in Customer,N/A,3,1,65.00,0.00,65.00,65.00,Branch 1,Manaye Zeleke
+13,2026-05-13 18:26,Walk-in Customer,N/A,1,1,90.00,0.00,90.00,90.00,Branch 1,Manaye Zeleke
+12,2026-05-13 18:24,Walk-in Customer,N/A,1,1,90.00,1.80,88.20,88.20,Branch 1,Manaye Zeleke
+11,2026-05-13 18:07,Walk-in Customer,N/A,1,1,90.00,0.90,89.10,89.10,Branch 1,Manaye Zeleke
+10,2026-05-13 18:06,Walk-in Customer,N/A,1,10,90.00,90.00,810.00,810.00,Branch 1,Manaye Zeleke
+9,2026-05-13 18:05,Walk-in Customer,N/A,1,14,90.00,126.00,1134.00,1134.00,Branch 1,Manaye Zeleke
+8,2026-05-13 17:52,weer,12343434,1,1,90.00,1.80,88.20,88.00,Branch 1,Manaye Zeleke
+7,2026-05-13 11:28,abebe,hhhh,2,12,37.00,0.00,444.00,444.00,Branch 2,manaye zeleke
+6,2026-05-13 11:22,Walk-in Customer,N/A,1,12,90.00,0.00,1080.00,1080.00,Branch 1,mihre kebe
+5,2026-05-13 11:14,Walk-in Customer,N/A,3,9,65.00,0.00,585.00,585.00,Branch 1,mihre kebe
+4,2026-05-13 11:02,Walk-in Customer,N/A,1,1,90.00,2.70,87.30,87.00,Branch 1,mihre kebe
+3,2026-05-13 11:01,Walk-in Customer,N/A,1,10,90.00,27.00,873.00,897.00,Branch 1,mihre kebe
+1,2026-05-13 10:32,kebede,09876543567,1,100,90.00,5.00,8995.00,8995.00,Branch 1,mihre kebe

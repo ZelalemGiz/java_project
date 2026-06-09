@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="561.0" prefWidth="394.0" spacing="20" style="-fx-padding: 10;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pharmacy.controller.ProfileController">
+   <children>
+      <ImageView fx:id="profileImage" fitHeight="79.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" />
+      <VBox maxWidth="400" prefHeight="407.0" prefWidth="355.0" spacing="10" styleClass="card">
+         <children>
+            <Label styleClass="label-title" text="My Profile" />
+            <Label style="-fx-padding: 0 0 10 0;" styleClass="label-subtitle" text="Update your username and password" />
+            <Label style="-fx-font-weight: bold;" text="Username" />
+            <TextField fx:id="usernameField" promptText="Enter current username" styleClass="text-field" />
+            <Label style="-fx-font-weight: bold;" text="Old Password" />
+            <PasswordField fx:id="oldPasswordField" promptText="Enter old password" styleClass="password-field" />
+            <Label style="-fx-font-weight: bold;" text="New Password" />
+            <PasswordField fx:id="newPasswordField" promptText="Enter new password" styleClass="password-field" />
+         </children>
+      </VBox>
+      <HBox prefHeight="44.0" prefWidth="374.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleBack" prefHeight="37.0" prefWidth="101.0" text="← Back " />
+            <Pane prefHeight="38.0" prefWidth="106.0" />
+            <Button maxWidth="Infinity" onAction="#handleUpdateProfile" style="-fx-margin-top: 10;" styleClass="button-primary" text="Update " />
+         </children>
+      </HBox>
+   </children>
+</VBox>

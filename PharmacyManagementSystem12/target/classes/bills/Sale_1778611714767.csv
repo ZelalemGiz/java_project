@@ -1,0 +1,7 @@
+Sale ID,Date,Buyer Name,Buyer Phone,Medicine ID,Qty,Unit Price,Discount,Total Price,Total Amount,Branch,Seller
+7,2026-05-12 21:40,Walk-in Customer,N/A,2,1,38.00,0.00,38.00,38.00,My Pharmacy,werew rew
+6,2026-05-12 21:34,Walk-in Customer,N/A,3,133,23.00,0.00,3059.00,3059.00,Main Branch,werew rew
+5,2026-05-12 21:22,Walk-in Customer,N/A,2,14,38.00,0.00,532.00,532.00,My Pharmacy,werew rew
+
+Total Sales,3
+Total Revenue,$3629.00
